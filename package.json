@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^2.0.0",
+    "fast-csv": "^2.0.0",
     "sendgrid": "^2.0.0"
   }
 }
