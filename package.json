@@ -1,0 +1,21 @@
+{
+  "name": "sendgrid-csv-campaign",
+  "version": "1.0.0",
+  "description": "Send CSV campaign using Sendgrid's API. Use to avoid deduplication of email addresses as seen within their campaign manager tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sendgrid",
+    "Sendgrid",
+    "API",
+    "CSV",
+    "campaign"
+  ],
+  "author": "Tom Chomiak",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^2.0.0"
+  }
+}
