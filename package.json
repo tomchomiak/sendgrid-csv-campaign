@@ -4,6 +4,7 @@
   "description": "Send CSV campaign using Sendgrid's API. Use to avoid deduplication of email addresses as seen within their campaign manager tool",
   "main": "app.js",
   "scripts": {
+    "send": "node app.js",
     "setup": "node setup.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
