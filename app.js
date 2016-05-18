@@ -18,14 +18,70 @@ var DEFAULT_CSV_URL_COL = process.env.DEFAULT_CSV_URL_COL;
  */
 var sendgrid  = require('sendgrid')(SENDGRID_API_KEY);
 
-var payload   = {
-  to      : 'to@example.com',
-  from    : 'from@other.com',
-  subject : 'Saying Hi',
-  text    : 'This is my first email through SendGrid'
+
+
+var sendEmail = function (options){
+
+		var mail = new sendgrid.Email();
+
+		var firstname = options.firstname;
+		var email  = options.email;
+		var project   = options.project;
+		var subject   = options.subject;
+		
+
+		mail.subject = subject;
+		mail.from = 'help@yourwordgroups.com';
+		mail.fromname = 'YourWord Network';
+		mail.text = ' ';
+		mail.html = ' ';
+		mail.addTo(email);
+
+
+		mail.addSubstitution('%FIRSTNAME%', firstname);
+		mail.addSubstitution('%PROJECT%', project);
+		mail.addSubstitution('%URL%', url);
+
+
+		// add filter settings one at a time 
+		mail.addFilter('templates', 'enable', 1);
+		mail.addFilter('templates', 'template_id', SENDGRID_TEMPLATE_ID);
+		 
+
+		sendgrid.send(mail, function(err, json) {
+		  if (err) { return console.error(err); }
+		  console.log(json);
+		});
 }
 
-sendgrid.send(payload, function(err, json) {
-  if (err) { console.error(err); }
-  console.log(json);
-});
+
+
+
+
+var firstname = 'Tom';
+var email = 't.chomiak@hallandpartners.com';
+var project   = '1234';
+var url = 'http://www.tomchomiak.com';
+var firstname = 'Tom';
+
+sendEmail({
+	firstname: firstname,
+	email: email,
+	project: project,
+	subject: 'Talk to us about your April YWN project ' + project
+})
+
+
+
+var firstname = 'Tom';
+var email = 't.chomiak@hallandpartners.com';
+var project   = 'ABCD';
+var url = 'http://www.google.com';
+var firstname = 'Tom';
+
+sendEmail({
+	firstname: firstname,
+	email: email,
+	project: project,
+	subject: 'Talk to us about your April YWN project ' + project
+})
