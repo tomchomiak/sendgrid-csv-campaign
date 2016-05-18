@@ -1,6 +1,6 @@
 #
 #
-# WARNING: Do not set your environment variablew within .sample-env file directly.
+# WARNING: Do not set your environment variables within .sample-env file directly.
 # This file will be commited to your repository.
 #
 #
