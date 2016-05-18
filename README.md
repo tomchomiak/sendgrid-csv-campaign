@@ -15,7 +15,7 @@ Create a sample `.env` file
 npm run setup
 ```
 
-Update environment variable in .env file 
+Update environment variable in newly created .env file 
 
 ```bash
 nano .env
