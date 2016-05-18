@@ -9,7 +9,7 @@ Install package dependencies
 npm install
 ```
 
-Create a sample `.env` file
+Create a sample *.env* file
 
 ```bash 
 npm run setup
