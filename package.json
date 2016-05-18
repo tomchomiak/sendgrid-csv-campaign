@@ -18,6 +18,7 @@
   "author": "Tom Chomiak",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^2.0.0"
+    "dotenv": "^2.0.0",
+    "sendgrid": "^2.0.0"
   }
 }
